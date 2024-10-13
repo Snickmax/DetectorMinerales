@@ -32,17 +32,9 @@ class MineralModel:
 
             # Suponiendo que tienes un diccionario de clases, podrías hacer algo como esto:
             class_labels = {
-                0: 'Atacamita', 
-                1: 'Bornita', 
-                2: 'Brochantita',
-                3: 'Calcopirita', 
-                4: 'Calcosina', 
-                5: 'Chalcantita',
-                6: 'Cobre nativo', 
-                7: 'Enargita', 
-                8: 'Galena',
-                9: 'Malaquita', 
-                10: 'Pirita'
+                0: 'Bornita', 
+                1: 'Malaquita', 
+                2: 'Pirita'
             }  # Cambia esto por tus clases reales
             
             predicted_class_label = class_labels[predicted_class_index]
