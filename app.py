@@ -31,16 +31,14 @@ def upload():
     model_path = 'models/best_model.keras'
     model = MineralModel(model_path)
     resultado = model.predict(image_path)
-    print(resultado)
 
     # Obtener un mineral aleatorio de la base de datos
     minerals = minerals_collection.find_one({"nombre": resultado})  # Asegúrate de que existe esta colección
     if not minerals:
         return 'No hay minerales en la base de datos', 404
-    print(minerals)
     
 
-    return render_template('results.html', mineral=minerals)
+    return render_template('results.html', mineral=minerals, image_path=image_path)
 
 if __name__ == '__main__':
     app.run(debug=True)
